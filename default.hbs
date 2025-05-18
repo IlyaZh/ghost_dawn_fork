@@ -105,7 +105,12 @@
         {{#if @custom.show_featured_posts}}
             {{> "featured-posts"}}
         {{/if}}
+        
+        {{#if @custom.show_growth_posts_widget}}
+            {{> "growth-posts"}}
+        {{/if}}
     {{/is}}
+    
 
     <div class="site-content">
         {{{body}}}

@@ -2,30 +2,22 @@
 
 <main class="site-main">
 
-    {{#if @custom.growth_posts_widget_enabled}}
-    <section class="gh-inner">
-        <h2 class="featured-title">Growth posts</h2>
-     <div class="post-feed gh-feed gh-canvas">
-            {{get "posts" limit=@custom.growth_posts_per_page filter="tag:-[Growth]"}}
+    
+    <div class="gh-outer">
+        <section class="gh-inner">
+
+            {{#is "home"}}
+            <h2 class="featured-title">Blog</h2>
+            {{/is}}
+            
+            <div class="post-feed gh-feed gh-canvas">
                 {{#foreach posts}}
                     {{> "loop"}}
                 {{/foreach}}
-            {{/get}}
-        </div>
-    </section>
-    {{/if}}
+            </div>
+        </section>
 
-    <section class="gh-inner">
-        
-        <div class="post-feed gh-feed gh-canvas">
-            {{get "posts" limit=@config.posts_per_page filter="tag:-[Growth]"}}
-                {{#foreach posts}}
-                    {{> "loop"}}
-                {{/foreach}}
-            {{/get}}
-        </div>
-    </section>
-
-    {{pagination}}
+        {{pagination}}
+    </div>
 
 </main>
