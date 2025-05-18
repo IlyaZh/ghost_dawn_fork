@@ -1,7 +1,7 @@
 {
     "name": "dawn-adapted",
     "description": "A Ghost theme Dawn, which forked and adapted by Ilia Zhitenev",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "private": true,
     "engines": {
         "ghost": ">=5.0.0"

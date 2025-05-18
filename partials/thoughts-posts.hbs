@@ -1,21 +1,23 @@
 {{#get "posts" limit=5 filter="primary_tag:[Thoughts]" order="published_at desc" as |thoughts_posts pages|}}
 {{#match pages.total "!=" 0}}
-<div class="gh-outer">
-    
-    <section class="featured-wrapper gh-inner">
-        <h2 class="featured-title">#Thoughts</h2>
-        <div class="post-feed gh-feed gh-canvas">
-            {{#foreach thoughts_posts}}
-                {{> "loop"}}
-            {{/foreach}}
-        </div>
-    </section>
+<div class="column">
+    <div class="gh-outer">
+        
+        <section class="featured-wrapper gh-inner">
+            <h2 class="featured-title">#Thoughts</h2>
+            <div class="post-feed gh-feed gh-canvas">
+                {{#foreach thoughts_posts}}
+                    {{> "loop"}}
+                {{/foreach}}
+            </div>
+        </section>
 
-    {{#match pages.total ">" 5}}
-    <nav class="load-more">
-        <a href="{{website}}/thoughts/" target="_blank" class="button button-secondary">Read more #Thoughts posts</a>
-    </nav>
-    {{/match}}
+        {{#match pages.total ">" 5}}
+        <nav class="load-more">
+            <a href="{{website}}/thoughts/" target="_blank" class="button button-secondary">Read more #Thoughts posts</a>
+        </nav>
+        {{/match}}
+    </div>
 </div>
 {{/match}}
 {{/get}}
