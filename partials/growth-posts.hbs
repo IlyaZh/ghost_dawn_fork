@@ -1,5 +1,7 @@
+{{#get "posts" limit=5 filter="primary_tag:[Growth]" order="published_at desc" as |growth_posts pages|}}
+{{#match pages.total "!=" 0}}
 <div class="gh-outer">
-    {{#get "posts" limit=5 filter="primary_tag:[Growth]" order="published_at desc" as |growth_posts pages|}}
+    
     <section class="featured-wrapper gh-inner">
         <h2 class="featured-title">#Growth</h2>
         <div class="post-feed gh-feed gh-canvas">
@@ -14,5 +16,6 @@
         <a href="{{website}}/growth/" target="_blank" class="button button-secondary">Read more #Growth posts</a>
     </nav>
     {{/match}}
-    {{/get}}
 </div>
+{{/match}}
+{{/get}}
