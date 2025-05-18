@@ -105,15 +105,28 @@
         {{#if @custom.show_featured_posts}}
             {{> "featured-posts"}}
         {{/if}}
-        
-        {{#if @custom.show_growth_posts_widget}}
-            {{> "growth-posts"}}
-        {{/if}}
     {{/is}}
     
 
     <div class="site-content">
         {{{body}}}
+
+        {{#is "home"}}
+            <div class="rows-container">
+                {{#if @custom.show_growth_posts_widget}}
+                <div class="column">
+                        {{> "growth-posts"}}
+                </div>
+                {{/if}}
+
+                {{#if @custom.show_thoughts_posts_widget}}
+                <div class="column">
+                    {{> "thoughts-posts"}}
+                </div>
+                {{/if}}
+            </div>
+            <div class="rows-container">&nbsp;</div>
+        {{/is}}
     </div>
 
     <footer class="gh-foot{{#unless @site.secondary_navigation}} no-menu{{/unless}} gh-outer">

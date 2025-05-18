@@ -1,7 +1,7 @@
 {
     "name": "dawn-adapted",
     "description": "A Ghost theme Dawn, which forked and adapted by Ilia Zhitenev",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "private": true,
     "engines": {
         "ghost": ">=5.0.0"
@@ -96,6 +96,11 @@
                 "group": "post"
             },
             "show_growth_posts_widget": {
+                "type": "boolean",
+                "default": true,
+                "group": "homepage"
+            },
+            "show_thoughts_posts_widget": {
                 "type": "boolean",
                 "default": true,
                 "group": "homepage"

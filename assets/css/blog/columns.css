@@ -1,0 +1,17 @@
+.rows-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    line-height: 1rem;
+    padding-bottom: 2rem;
+}
+
+.column {
+    flex: 1;
+}
+
+@media (max-width: 767px) {
+    .rows-container {
+        flex-direction: column;
+    }
+}
